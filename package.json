@@ -1,0 +1,32 @@
+{
+    "name": "ctxobj",
+    "description": "Objects with immutable context, especially good for contextual logging",
+    "main": "./main",
+    "author": "Elad Ben-Israel <elad.benisrael@gmail.com>",
+    "version": "0.1.0",
+    "contributors": [ ],
+    "keywords": [
+        "context",
+        "immutable",
+        "logging",
+        "console",
+        "log"
+    ],
+    "dependencies": {
+    },
+    "license": "MIT",
+    "engines": {
+        "node": "~0.6.6"
+    },
+    "devDependencies": {
+        "nodeunit": "0.6.x",
+        "logule": "0.5.x"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/anodejs/node-ctxcon"
+    },
+    "scripts": {
+        "test": "nodeunit test/*.test.js"
+    }
+}

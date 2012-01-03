@@ -19,8 +19,7 @@
         "node": "~0.6.6"
     },
     "devDependencies": {
-        "nodeunit": "0.6.x",
-        "logule": "0.5.x"
+        "nodeunit": "0.6.x"
     },
     "repository": {
         "type": "git",

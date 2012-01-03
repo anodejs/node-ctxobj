@@ -1,3 +1,3 @@
-exports.ctxobj = require('./lib/ctxobj');
-exports.ctxcon = require('./lib/ctxcon');
-
+exports.new = require('./lib/ctxobj');
+exports.console = require('./lib/ctxcon');
+exports.object = require('./lib/object');

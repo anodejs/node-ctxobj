@@ -1,4 +1,4 @@
-var ctxcon = require('../main').ctxcon;
+var ctxcon = require('../main').console;
 
 exports.ctxcon = function(test) {
 

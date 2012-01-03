@@ -1,4 +1,4 @@
-var ctxobj = require('../main').ctxobj;
+var ctxobj = require('../main').new;
 
 exports.ctxobj = function(test) {
 	var any = {};

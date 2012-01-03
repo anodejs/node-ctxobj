@@ -1,5 +1,7 @@
 # ctxobj #
 
+[![Build Status](https://secure.travis-ci.org/anodejs/node-ctxobj.png)](http://travis-ci.org/anodejs/node-ctxobj)
+
 Adds immutable context to objects. Good for contextual logging.
 
 ## ctxobj.new(obj) ##

@@ -24,7 +24,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "http://github.com/anodejs/node-ctxcon"
+        "url": "http://github.com/anodejs/node-ctxobj"
     },
     "scripts": {
         "test": "nodeunit test/*.test.js"

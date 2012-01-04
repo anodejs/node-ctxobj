@@ -52,8 +52,10 @@ var ctxobj = require('ctxobj');
 var log0 = ctxobj.console(console);
 log0.info('no context yet');
 
-var log1 = log0.pushctx('c1').pushctx('c2');
+var i = 0;
+var log1 = log0.pushctx('c1').pushctx(function() { return i++; });
 log1.warn('now with a two items in the context');
+log1.info('yo yo yo');
 
 var log2 = log1.popctx();
 log2.error('only one item in the context now');
@@ -63,9 +65,18 @@ Output:
 
 ```
 no context yet
-[c1] [c2] now with a two items in the context
+[c1] [0] now with a two items in the context
+[c1] [1] yo yo yo
 [c1] only one item in the context now
 ```
+
+Some sugar:
+
+### ctxobj.timestamp() ###
+Pushes a timestamp function to the context
+
+### ctxobj.stacktop(skip) ###
+Pushes file name and line number of log line to the context (skipping `skip` frames).
 
 ## ctxobj.object(parent) ##
 

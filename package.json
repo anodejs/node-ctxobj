@@ -3,7 +3,7 @@
     "description": "Objects with immutable context, especially good for contextual logging",
     "main": "./main",
     "author": "Elad Ben-Israel <elad.benisrael@gmail.com>",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "contributors": [ ],
     "keywords": [
         "context",

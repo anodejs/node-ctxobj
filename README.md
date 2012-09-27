@@ -23,9 +23,15 @@ obj1.pushctx('c2a').pushctx('c2b')
 obj1.popctx().popctx();
 
 // enumarate contexts
-obj.forEachCtx(function(c) {
+obj1.forEachCtx(function(c) {
   console.log(c);
 });
+```
+
+Output:
+
+```
+c1
 ```
 
 ## ctxobj.console(console) ##

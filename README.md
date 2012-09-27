@@ -1,6 +1,6 @@
 # ctxobj #
 
-[![Build Status](https://secure.travis-ci.org/anodejs/node-ctxobj.png)](http://travis-ci.org/anodejs/node-ctxobj)
+[![Build Status](https://secure.travis-ci.org/anodejs/node-ctxobj.png?branch=master)](http://travis-ci.org/anodejs/node-ctxobj)
 
 Adds context to objects. Good for contextual logging.
 

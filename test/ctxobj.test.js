@@ -3,33 +3,37 @@ var ctxobj = require('../main').new;
 exports.ctxobj = function(test) {
 	var any = {};
 
-	any.getContext = function() { 
-		return this.ctx; 
-	};
+	any.getContext = function() {
+		var ctx = [];
+		this.forEachCtx(function(item) {
+			ctx.push(item);
+		})
+		return ctx;
+	}
 
 	var c0 = ctxobj(any);
 	test.deepEqual(c0.getContext(), []);
 
 	var c1 = c0.pushctx("C1");
-	test.deepEqual(c0.getContext(), []);
+	test.deepEqual(c0.getContext(), ["C1"]);
 	test.deepEqual(c1.getContext(), ["C1"]);
 
 	var c2 = c1.pushctx("C2");
-	test.deepEqual(c0.getContext(), []);
-	test.deepEqual(c1.getContext(), ["C1"]);
+	test.deepEqual(c0.getContext(), ["C1","C2"]);
+	test.deepEqual(c1.getContext(), ["C1","C2"]);
 	test.deepEqual(c2.getContext(), ["C1","C2"]);
 
 	var c3 = c2.pushctx("C3");
-	test.deepEqual(c0.getContext(), []);
-	test.deepEqual(c1.getContext(), ["C1"]);
-	test.deepEqual(c2.getContext(), ["C1","C2"]);
+	test.deepEqual(c0.getContext(), ["C1","C2","C3"]);
+	test.deepEqual(c1.getContext(), ["C1","C2","C3"]);
+	test.deepEqual(c2.getContext(), ["C1","C2","C3"]);
 	test.deepEqual(c3.getContext(), ["C1","C2","C3"]);
 
 	var c4 = c3.popctx(c3);
-	test.deepEqual(c0.getContext(), []);
-	test.deepEqual(c1.getContext(), ["C1"]);
+	test.deepEqual(c0.getContext(), ["C1","C2"]);
+	test.deepEqual(c1.getContext(), ["C1","C2"]);
 	test.deepEqual(c2.getContext(), ["C1","C2"]);
-	test.deepEqual(c3.getContext(), ["C1","C2","C3"]);
+	test.deepEqual(c3.getContext(), ["C1","C2"]);
 	test.deepEqual(c4.getContext(), ["C1","C2"]);
 
 	var c5 = c4.popctx();
@@ -45,7 +49,7 @@ exports.ctxobj = function(test) {
 	test.deepEqual(c8.getContext(), ["C1","C6"]);
 
 	var c9 = c3.pushctx("C9");
-	test.deepEqual(c9.getContext(), ["C1","C2","C3","C9"]);
+	test.deepEqual(c9.getContext(), ["C1","C6","C9"]);
 
 	test.done();
 }

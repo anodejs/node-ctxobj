@@ -1,13 +1,12 @@
 {
     "name": "ctxobj",
-    "description": "Objects with immutable context, especially good for contextual logging",
+    "description": "Objects with context, especially good for contextual logging",
     "main": "./main",
     "author": "Elad Ben-Israel <elad.benisrael@gmail.com>",
-    "version": "0.2.1",
-    "contributors": [ ],
+    "version": "0.3.0",
+    "contributors": [ "Yosef Dinerstein <yosefd@microsoft.com>" ],
     "keywords": [
         "context",
-        "immutable",
         "logging",
         "console",
         "log"
@@ -16,7 +15,7 @@
     },
     "license": "MIT",
     "engines": {
-        "node": ">=0.6.6"
+        "node": "0.8.x"
     },
     "devDependencies": {
         "nodeunit": "0.6.x"

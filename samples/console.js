@@ -8,6 +8,3 @@ log1.warn('now with a two items in the context');
 
 var log2 = log1.popctx();
 log2.error('only one item in the context now');
-
-
-
